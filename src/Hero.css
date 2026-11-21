@@ -1,0 +1,157 @@
+.hero-page {
+  width: min(1100px, calc(100% - 40px));
+  margin: clamp(24px, 8vh, 76px) auto;
+}
+
+.image-stream-hero {
+  position: relative;
+  isolation: isolate;
+  height: 560px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  background: #15141a;
+  color: #fff;
+}
+
+.image-stream-hero__gallery,
+.image-stream-hero__shade,
+.image-stream-hero__content {
+  position: absolute;
+  inset: 0;
+}
+
+.image-stream-hero__gallery {
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.image-stream-hero__track {
+  position: absolute;
+  left: -25%;
+  display: flex;
+  width: max-content;
+  gap: 14px;
+  animation: image-stream-scroll 100s linear infinite;
+  will-change: translate;
+}
+
+.image-stream-hero__track[data-row='0'] {
+  top: 3%;
+  transform: rotateY(-10deg);
+}
+
+.image-stream-hero__track[data-row='1'] {
+  top: 37%;
+  transform: rotateY(8deg);
+  animation-direction: reverse;
+  animation-duration: 112s;
+}
+
+.image-stream-hero__track[data-row='2'] {
+  top: 71%;
+  transform: rotateY(-7deg);
+  animation-duration: 94s;
+}
+
+.image-stream-hero__set {
+  display: flex;
+  flex: none;
+  gap: 14px;
+}
+
+.image-stream-hero__image {
+  display: block;
+  width: clamp(150px, 18vw, 220px);
+  height: 190px;
+  flex: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+  user-select: none;
+}
+
+.image-stream-hero__shade {
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(11, 10, 14, 0.3), rgba(11, 10, 14, 0.18) 42%, rgba(11, 10, 14, 0.64)),
+    linear-gradient(90deg, rgba(11, 10, 14, 0.32), transparent 35%, transparent 65%, rgba(11, 10, 14, 0.32));
+  pointer-events: none;
+}
+
+.image-stream-hero__content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px 24px 38px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.hero-demo__heading h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 1.02;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
+}
+
+.hero-demo__description {
+  max-width: 440px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.6;
+  text-wrap: balance;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes image-stream-scroll {
+  from {
+    translate: 0 0;
+  }
+
+  to {
+    translate: -50% 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-page {
+    width: calc(100% - 24px);
+    margin: 24px auto;
+  }
+
+  .image-stream-hero {
+    height: min(560px, calc(100svh - 48px));
+    min-height: 440px;
+  }
+
+  .image-stream-hero__track {
+    left: -55%;
+    gap: 10px;
+  }
+
+  .image-stream-hero__set {
+    gap: 10px;
+  }
+
+  .image-stream-hero__image {
+    width: 158px;
+    height: 164px;
+  }
+
+  .image-stream-hero__content {
+    padding: 48px 18px 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-stream-hero__track {
+    animation: none;
+  }
+}

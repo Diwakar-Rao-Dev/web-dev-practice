@@ -1,0 +1,232 @@
+.solar-faq {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto clamp(48px, 9vh, 96px);
+  color: #25372a;
+}
+
+.solar-faq__intro {
+  max-width: 620px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.solar-faq__eyebrow,
+.solar-contact__eyebrow {
+  color: #6a875a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.solar-faq__intro h2,
+.solar-contact h2 {
+  margin: 12px 0 10px;
+  color: #203327;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 550;
+  letter-spacing: -0.05em;
+  line-height: 1.12;
+}
+
+.solar-faq__intro p,
+.solar-contact p {
+  color: #68766b;
+  font-size: 14px;
+  line-height: 1.65;
+  text-wrap: balance;
+}
+
+.solar-faq__list {
+  border-top: 1px solid #dfe6dc;
+}
+
+.solar-faq__item {
+  border-bottom: 1px solid #dfe6dc;
+}
+
+.solar-faq__item h3 {
+  margin: 0;
+}
+
+.solar-faq__question {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 4px;
+  border: 0;
+  background: transparent;
+  color: #2b3d30;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.solar-faq__question:focus-visible {
+  border-radius: 5px;
+  outline: 2px solid #769265;
+  outline-offset: 2px;
+}
+
+.solar-faq__icon {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: none;
+  place-items: center;
+  border: 1px solid #d7e1d1;
+  border-radius: 50%;
+  color: #58774b;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.solar-faq__answer {
+  padding: 0 44px 20px 4px;
+}
+
+.solar-faq__answer p {
+  max-width: 720px;
+  color: #68766b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.solar-contact {
+  display: flex;
+  width: min(1100px, calc(100% - 40px));
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin: 0 auto clamp(48px, 9vh, 96px);
+  padding: clamp(25px, 5vw, 48px);
+  box-sizing: border-box;
+  border: 1px solid #dfe8d9;
+  border-radius: 16px;
+  background:
+    radial-gradient(ellipse at 90% 0%, rgba(196, 219, 175, 0.32), transparent 45%),
+    #f4f7ef;
+}
+
+.solar-contact h2 {
+  margin-top: 8px;
+  font-size: clamp(24px, 3.4vw, 34px);
+}
+
+.solar-contact p {
+  max-width: 590px;
+  font-size: 13px;
+}
+
+.solar-contact__link {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 16px;
+  border-radius: 8px;
+  background: #5e7c50;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background-color 160ms ease;
+}
+
+.solar-contact__link:hover {
+  background: #47633c;
+}
+
+.solar-contact__link:focus-visible {
+  outline: 2px solid #47633c;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .solar-faq {
+    width: calc(100% - 32px);
+  }
+
+  .solar-faq__question {
+    padding: 17px 2px;
+    font-size: 14px;
+  }
+
+  .solar-faq__answer {
+    padding: 0 38px 18px 2px;
+  }
+
+  .solar-contact {
+    width: calc(100% - 24px);
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .solar-contact__link {
+    transition: none;
+  }
+}
+
+.solar-faq {
+  color: #e7eee4;
+}
+
+.solar-faq__eyebrow,
+.solar-contact__eyebrow {
+  color: #a6c28e;
+}
+
+.solar-faq__intro h2,
+.solar-contact h2 {
+  color: #f0f5ec;
+}
+
+.solar-faq__intro p,
+.solar-contact p,
+.solar-faq__answer p {
+  color: #a5b0a5;
+}
+
+.solar-faq__list,
+.solar-faq__item {
+  border-color: #2b352c;
+}
+
+.solar-faq__question {
+  color: #e4ece1;
+}
+
+.solar-faq__question:focus-visible {
+  outline-color: #a6c28e;
+}
+
+.solar-faq__icon {
+  border-color: #39463a;
+  color: #b7d29e;
+}
+
+.solar-contact {
+  border-color: #29352a;
+  background:
+    radial-gradient(ellipse at 90% 0%, rgba(125, 163, 98, 0.14), transparent 45%),
+    #101610;
+}
+
+.solar-contact__link {
+  background: #587747;
+}
+
+.solar-contact__link:hover {
+  background: #6e9258;
+}
+
+.solar-contact__link:focus-visible {
+  outline-color: #a6c28e;
+}
