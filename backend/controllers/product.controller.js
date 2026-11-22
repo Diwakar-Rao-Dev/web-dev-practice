@@ -25,7 +25,7 @@ export async function getProducts(req, res) {
 
 
 export async function getProduct(req, res) {
-  const product = await Product.findOne({
+  const product = await product.findOne({
     _id: req.params.id,
     user: req.userId,
   });
